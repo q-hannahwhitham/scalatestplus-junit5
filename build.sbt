@@ -1,11 +1,11 @@
 import java.io.PrintWriter
 import scala.io.Source
 
-name := "junit-5.13"
+name := "junit-5.14"
 
 organization := "org.scalatestplus"
 
-version := "3.2.19.0"
+version := "3.2.20.0"
 
 homepage := Some(url("https://github.com/scalatest/scalatestplus-junit"))
 
@@ -26,12 +26,12 @@ developers := List(
   )
 )
 
-scalaVersion := "2.13.15"
+scalaVersion := "2.13.18"
 
 crossScalaVersions := List(
   "2.11.12",
-  "2.12.20",
-  "2.13.16",
+  "2.12.21",
+  scalaVersion.value,
   "3.3.5"
 )
 
@@ -46,9 +46,9 @@ Compile / unmanagedSourceDirectories ++= {
   }
 }
 
-val scalatestVersion = "3.2.19"
-val junitVersion = "5.13.1"
-val junitEngineVersion = "1.13.1"
+val scalatestVersion = "3.2.20"
+val junitVersion = "5.14.3"
+val junitEngineVersion = "1.14.3"
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest-core" % scalatestVersion,
@@ -110,10 +110,7 @@ OsgiKeys.additionalHeaders:= Map(
   "Bundle-Vendor" -> "Artima, Inc."
 )
 
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  Some("publish-releases" at nexus + "service/local/staging/deploy/maven2")
-}
+publishTo := localStaging.value
 
 publishMavenStyle := true
 
