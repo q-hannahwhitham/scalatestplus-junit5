@@ -16,12 +16,12 @@ If ScalaTest has saved you time, helped you ship better software, or become a ke
 
 **Usage**
 
-To use it for ScalaTest 3.2.19 and JUnit 5.13:
+To use it for ScalaTest 3.2.20 and JUnit 5.14:
 
 SBT:
 
 ```
-libraryDependencies += "org.scalatestplus" %% "junit-5-13" % "3.2.19.0" % Test
+libraryDependencies += "org.scalatestplus" %% "junit-5-13" % "3.2.20.0" % Test
 ```
 
 Maven:
@@ -29,8 +29,8 @@ Maven:
 ```
 <dependency>
   <groupId>org.scalatestplus</groupId>
-  <artifactId>junit-5-13_3</artifactId>
-  <version>3.2.19.0</version>
+  <artifactId>junit-5-14_3</artifactId>
+  <version>3.2.20.0</version>
   <scope>test</scope>
 </dependency>
 ```
@@ -39,12 +39,12 @@ Gradle:
 
 ```
 dependencies {
-    implementation "org.scala-lang:scala3-library:3.3.5"
+    implementation "org.scala-lang:scala3-library:3.3.7"
 
-    testImplementation "org.scalatest:scalatest_3:3.2.19"
-    testImplementation "org.junit.platform:junit-platform-launcher:1.13.1"
-    testRuntimeOnly "org.junit.platform:junit-platform-engine:1.13.1"
-    testRuntimeOnly "org.scalatestplus:junit-5-13_3:3.2.19.0"
+    testImplementation "org.scalatest:scalatest_3:3.2.20"
+    testImplementation "org.junit.platform:junit-platform-launcher:1.14.3"
+    testRuntimeOnly "org.junit.platform:junit-platform-engine:1.14.3"
+    testRuntimeOnly "org.scalatestplus:junit-5-14_3:3.2.20.0"
 }
 
 test {
@@ -61,12 +61,12 @@ Gradle (Kotlin):
 
 ```
 dependencies {
-    implementation("org.scala-lang:scala3-library:3.3.5")
+    implementation("org.scala-lang:scala3-library:3.3.7")
 
-    testImplementation("org.scalatest:scalatest_3:3.2.19")
-    testRuntimeOnly("org.junit.platform:junit-platform-engine:1.13.1")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.13.1")
-    testRuntimeOnly("org.scalatestplus:junit-5-13_3:3.2.19.0")
+    testImplementation("org.scalatest:scalatest_3:3.2.20")
+    testRuntimeOnly("org.junit.platform:junit-platform-engine:1.14.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.14.3")
+    testRuntimeOnly("org.scalatestplus:junit-5-14_3:3.2.20.0")
 }
 
 tasks {
@@ -98,4 +98,5 @@ Please use the following commands to publish to Sonatype:
 
 ```
 $ sbt +publishSigned
+$ sbt sonaUpload
 ```
